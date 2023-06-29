@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case 3 Theme 9
+        </title>
+    </head>
+        <body>
+            <script>
+                'use strict';  
+
+                // Написать программу, которая преобразует введенную пользователем строку,
+                // удаляя из нее лишние пробелы, то есть в преобразованной строке не должно быть
+                // более одного пробела подряд. В учебных целях не допускается использование
+                // регулярный выражений, а также функций из сторонних библиотек. При
+                // программной реализации функции использовать рекурсию.
+
+                    let textSpace = prompt('Введите числа через пробел', '1        2        3');
+                    
+                    function spaces(string) {  
+                                        
+                        if (string.length < 2) {
+                            return string;
+                        }; 
+                        
+                        if (string.indexOf('  ') != -1 ) {
+                            string = string.replace('  ', ' ');
+                            return spaces(string);
+                        } else {
+                            return string;
+                        };
+                    };
+                    
+                    console.log(spaces(textSpace));
+
+            </script>
+        </body>
+</html>
